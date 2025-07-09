@@ -6,6 +6,26 @@ const swiper = new Swiper('.swiper', {
   },
   autoplay: {
     delay: 3000,
-    disableOnInteraction: true, // para parar no toque
+    disableOnInteraction: false,
   },
+});
+
+// Impede o menu ao pressionar a imagem
+document.querySelectorAll('.swiper-slide img').forEach(img => {
+  img.addEventListener('contextmenu', e => e.preventDefault());
+});
+
+// Pausar quando tocar e segurar
+const swiperEl = document.querySelector('.swiper');
+
+swiperEl.addEventListener('touchstart', () => {
+  swiper.autoplay.stop();
+});
+
+swiperEl.addEventListener('touchend', () => {
+  swiper.autoplay.start();
+});
+
+swiperEl.addEventListener('touchcancel', () => {
+  swiper.autoplay.start();
 });
