@@ -1,33 +1,40 @@
-/* Remove qualquer margem e padding do body */
-body {
+/* Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #000;
 }
 
-/* Container principal ocupa 100vw para evitar rolagem horizontal */
+/* Tela cheia sem rolagem extra */
+body {
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+/* Centraliza o carrossel */
 .carousel-container {
-  width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Swiper ocupa 100% da largura e altura visível */
+/* Swiper container */
 .swiper {
-  width: 100%;
-  max-width: 1080px;
+  width: 1080px;
   height: 1350px;
-  overflow: hidden;
 }
 
-/* Cada slide com tamanho fixo */
+/* Slide ocupa todo espaço */
 .swiper-slide {
   width: 1080px;
   height: 1350px;
-  background-color: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
+}
+
+/* Imagem dentro do slide */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
