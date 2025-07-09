@@ -1,0 +1,50 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  padding-bottom: 60px; /* Espaço para o rodapé */
+}
+
+/* Header */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dbdbdb;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* Carrossel */
+.carousel-container {
+  padding: 20px;
+}
+
+.swiper-slide {
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin: 5px;
+}
+
+/* Rodapé */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
